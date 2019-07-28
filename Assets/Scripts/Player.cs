@@ -64,6 +64,17 @@ public class Player : MonoBehaviour
      */
     private void GetMovement()
     {
+        // IF we don't have any carry over velocity we can stop running
+        if (velocity == Vector2.zero)
+        {
+            playerAnimator.SetBool("isRunning", false);
+
+        }
+        else
+        {
+            FlipSprite();
+        }
+
         // Directional Inputs
         float h_movement = CrossPlatformInputManager.GetAxis("Horizontal");
         float v_movement = CrossPlatformInputManager.GetAxis("Vertical");
@@ -78,19 +89,7 @@ public class Player : MonoBehaviour
             playerAnimator.SetBool("isRunning", true);
             
         }
-        else if(velocity.x == 0) // if (velocity == Vector2.zero)
-        {
-            //if (! playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("standard_player_run"))
-           // {
-                playerAnimator.SetBool("isRunning", false);
-            //}
-            
-        }
 
-        if (Input.GetAxisRaw("Horizontal") != 0)
-        {
-            FlipSprite();
-        }
 
     }
 
@@ -108,23 +107,18 @@ public class Player : MonoBehaviour
 
     private void FlipSprite()
     {
+        //are we running left?
+        if (velocity.x < Mathf.Epsilon)
+        {
+            //rotate character so we appear to be running in opposite direction
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
 
-        // Don't flip our character if they are in the middle of a run animation 
-       
-            
-            bool runningLeft = velocity.x < Mathf.Epsilon;
-
-            //are we running left?
-            if (runningLeft)
-            {
-                //flip character.
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-
-            }
-            else
-            {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
+        }
+        else
+        {
+            //Reset rotation
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
         
         
     }
