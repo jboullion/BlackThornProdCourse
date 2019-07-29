@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 20
   m_Sprite: {fileID: -8222247235241175913, guid: 601189049832c66409b531ba0b770fe8,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.59568757, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   projectile: {fileID: 8776659226064944663, guid: 918012b07f7e8ed40820835b34a72d0c,
     type: 3}
   projectileStart: {fileID: 459659867130716997}
-  projectileDelay: 0.5
+  projectileDelay: 0.25
 --- !u!1 &2252838149899280433
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.67976373, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 2
+  m_Range: 1.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8776659226064944660}
   - component: {fileID: 8776659226064944661}
   - component: {fileID: 8776659226064944662}
+  - component: {fileID: 8458857885656703362}
   m_Layer: 0
-  m_Name: StafFProjectile
+  m_Name: StaffProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8776659226064944663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.5297966, y: 0.38, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 7361455006829876567, guid: 601189049832c66409b531ba0b770fe8,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.559062, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,8 +89,24 @@ Halo:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8776659226064944663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Color:
     serializedVersion: 2
     rgba: 4278221055
-  m_Size: 0.5
+  m_Size: 0.25
+--- !u!114 &8458857885656703362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8776659226064944663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e88c64f5759f4841aa156410fc0b8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 25
+  lifeTime: 0.5
+  explosion: {fileID: 7138773271658604619, guid: a34a3888518579346887aac15395921d,
+    type: 3}
