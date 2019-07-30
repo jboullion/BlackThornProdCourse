@@ -111,13 +111,14 @@ public class Player : MonoBehaviour
         if (velocity.x < Mathf.Epsilon)
         {
             //rotate character so we appear to be running in opposite direction
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-
+            // transform.localRotation = Quaternion.Euler(0, 180, 0);
+            //transform.localScale = new Vector2(Mathf.Sign(playerRigidBody2D.velocity.x), 1f);
+            //transform.localScale.x = Mathf.Sign(playerRigidBody2D.velocity.x);
         }
         else
         {
             //Reset rotation
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            //transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
         
         
