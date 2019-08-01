@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 720243842007342220}
   - component: {fileID: 3450320143714186938}
   m_Layer: 0
-  m_Name: Staff
+  m_Name: SmallBrush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -8222247235241175913, guid: 601189049832c66409b531ba0b770fe8,
+  m_Sprite: {fileID: 4111022625219200297, guid: 04ecc0a380afd004492eea3fc932a274,
     type: 3}
   m_Color: {r: 1, g: 0.59568757, b: 0, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b85ad241bd96a848b5cdc9e895b9f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8776659226064944663, guid: 918012b07f7e8ed40820835b34a72d0c,
+  projectile: {fileID: 8776659226064944663, guid: df653a73e3944ad4bbbca47b23750018,
     type: 3}
   projectileStart: {fileID: 459659867130716997}
   projectileDelay: 0.25

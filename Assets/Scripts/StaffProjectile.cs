@@ -7,6 +7,7 @@ public class StaffProjectile : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float lifeTime;
+    [SerializeField] int damage;
 
     [SerializeField] GameObject explosion;
 
@@ -27,5 +28,14 @@ public class StaffProjectile : MonoBehaviour
     {
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            collision.GetComponent<Enemy>().TakeDamage(damage);
+            DestroyProjectile();
+        }
     }
 }
