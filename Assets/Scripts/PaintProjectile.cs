@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaffProjectile : MonoBehaviour
+public class PaintProjectile : MonoBehaviour
 {
 
     [SerializeField] float speed;

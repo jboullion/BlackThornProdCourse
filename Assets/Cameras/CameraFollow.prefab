@@ -132,7 +132,7 @@ MonoBehaviour:
   lookAheadFactor: 0
   lookAheadReturnSpeed: 0
   lookAheadMoveThreshold: 0
-  minX: -6.7
-  maxX: 6.7
-  minY: -3.7
-  maxY: 3.7
+  minX: -2.2
+  maxX: 2.2
+  minY: -4
+  maxY: 4

@@ -7,9 +7,7 @@ public class BrainPlayer : MonoBehaviour
 {
     // Config
     [SerializeField] float runSpeed = 5f;
-    // [SerializeField] float climbSpeed = 3f;
-    // [SerializeField] float jumpForce = 5f;
-    // [SerializeField] float deathKick = 5f;
+    [SerializeField] int health = 5;
     [SerializeField] Transform leftEye;
     [SerializeField] Transform rightEye;
     [SerializeField] Transform leftPupil;
@@ -91,7 +89,7 @@ public class BrainPlayer : MonoBehaviour
         Vector2 moveInput = new Vector2(h_movement, v_movement);
 
         // Mouse Input
-        mouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);// - transform.position;
+        mouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;// - transform.position;
 
         // Normalize so diagonal movements do not increase speed
         velocity = moveInput.normalized * runSpeed;
@@ -128,8 +126,22 @@ public class BrainPlayer : MonoBehaviour
             playerRigidBody2D.MovePosition(playerRigidBody2D.position + velocity * Time.fixedDeltaTime);
         }
 
-       
-     
+        // Rotate Player to face mouse
+        //float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
+        //Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        //transform.rotation = rotation;
+
+    }
+
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Staff : MonoBehaviour
+public class Brush : MonoBehaviour
 {
 
     [SerializeField] GameObject projectile;
