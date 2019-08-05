@@ -51,9 +51,9 @@ TagManager:
   - name: Interactive
     uniqueID: 4098505481
     locked: 0
-  - name: Player
-    uniqueID: 1536457993
-    locked: 0
   - name: Fog
     uniqueID: 3702126649
+    locked: 0
+  - name: Player
+    uniqueID: 1536457993
     locked: 0
